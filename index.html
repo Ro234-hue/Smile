@@ -1,112 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glowing Flower Garden</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code by Harshit - Animated Blooming Flower</title>
+
+  <!-- Google Font -->
   <style>
-    body {
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+    * , *::after, *::before {
+      padding: 0;
       margin: 0;
-      height: 100vh;
-      background: #000;
-      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --dark-color: #000;
+    }
+
+    body {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
+      min-height: 100vh;
+      background-color: var(--dark-color);
+      font-family: "Poppins", sans-serif;
+
+      overflow: hidden;
+      perspective: 1000px;
     }
 
     h1 {
-      color: white;
-      font-family: Arial, sans-serif;
-      font-size: 2rem;
-      margin-top: 40px;
-    }
-    h1 span {
-      color: #ff00cc;
-      text-shadow: 0 0 20px #ff00cc, 0 0 40px #ff00cc;
-    }
-
-    svg {
       margin-top: 20px;
-      width: 100%;
-      height: 100%;
-    }
-
-    /* Animate drawing */
-    .draw {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-      animation: draw 4s linear forwards;
-    }
-
-    @keyframes draw {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-
-    /* Glow effect */
-    .glow {
-      filter: drop-shadow(0 0 8px #ff00cc) drop-shadow(0 0 20px #ff00cc);
-    }
-    .stem-glow {
-      filter: drop-shadow(0 0 8px #00ff55) drop-shadow(0 0 20px #00ff55);
-    }
-
-    /* Sparkles */
-    .sparkle {
-      fill: #fff;
-      opacity: 0;
-      animation: sparkleAnim 3s infinite;
-    }
-    @keyframes sparkleAnim {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 1; }
+      font-size: 2rem;
+      color: gold;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>KEEP A <span>SMILE</span> DEAR</h1>
+  <h1>KEEP SIMPLE DEAR</h1>
 
-  <svg viewBox="0 0 500 700">
-    <!-- Main stem -->
-    <path d="M250,700 C250,500 250,300 250,100"
-          stroke="#00ff55" stroke-width="6" fill="none"
-          class="draw stem-glow" style="animation-delay:0s"/>
+  <h2 style="color:white; margin-top:30px;">Animated Blooming Flower</h2>
 
-    <!-- Left vine -->
-    <path d="M250,500 C180,400 150,300 180,200"
-          stroke="#00ff55" stroke-width="4" fill="none"
-          class="draw stem-glow" style="animation-delay:1s"/>
-
-    <!-- Right vine -->
-    <path d="M250,450 C320,350 350,250 320,150"
-          stroke="#00ff55" stroke-width="4" fill="none"
-          class="draw stem-glow" style="animation-delay:1.5s"/>
-
-    <!-- Main flower center -->
-    <circle cx="250" cy="90" r="15" fill="yellow"
-            class="glow" />
-
-    <!-- Petals -->
-    <circle cx="250" cy="60" r="20" fill="#ff00cc" class="glow"/>
-    <circle cx="220" cy="90" r="20" fill="#ff00cc" class="glow"/>
-    <circle cx="280" cy="90" r="20" fill="#ff00cc" class="glow"/>
-    <circle cx="250" cy="120" r="20" fill="#ff00cc" class="glow"/>
-
-    <!-- Bottom bunch flowers -->
-    <circle cx="200" cy="650" r="10" fill="yellow" class="glow"/>
-    <circle cx="200" cy="630" r="15" fill="#ff00cc" class="glow"/>
-
-    <circle cx="300" cy="640" r="10" fill="yellow" class="glow"/>
-    <circle cx="300" cy="620" r="15" fill="#ff00cc" class="glow"/>
-
-    <!-- Sparkles -->
-    <circle cx="150" cy="200" r="3" class="sparkle"/>
-    <circle cx="350" cy="300" r="3" class="sparkle" style="animation-delay:1s"/>
-    <circle cx="220" cy="400" r="2" class="sparkle" style="animation-delay:2s"/>
-    <circle cx="280" cy="250" r="2" class="sparkle" style="animation-delay:1.5s"/>
-  </svg>
+  <!-- Flower animation will continue here in later part of code -->
 </body>
 </html>
